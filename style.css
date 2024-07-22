@@ -1,0 +1,321 @@
+body {
+    font-family: 'Acumin Variable Concept', sans-serif;
+    background-color: #191a1d;
+    color: #B9BEC1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+    color: #A4ADFF;
+}
+
+.navbar {
+    font-family: 'Neue', sans-serif;
+    background-color: #191a1d;
+    transition: background-color 0.3s;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: #A4ADFF !important;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #C1C9FF !important;
+}
+
+.nav-link {
+    color: #7E8183 !important;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #A4ADFF;
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+#theme-icon {
+    color: #7E8183;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.custom-heading {
+    color: #A4ADFF;
+    font-size: 5rem; /* Increased font size */
+    text-align: justify; /* Justify the text */
+    text-justify: inter-word; /* Ensures that the text justification spreads words evenly */
+}
+
+.custom-subheading {
+    font-family: 'Montserrat', sans-serif; /* Montserrat font */
+    font-weight: 400; /* Regular weight for Montserrat */
+    color: #A4ADFF; /* Text color */
+    font-size: 8rem; /* Large size */
+    position: relative; /* Position absolute for layering */
+    top: 50%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Centered alignment */
+    text-align: center;
+    margin-top: 150px;
+
+    /* Outline effect using text-stroke */
+    -webkit-text-stroke: 3px #000; /* For webkit browsers */
+}
+
+.separator {
+    width: 1450px; /* Adjust width as needed */
+    height: 1px; /* Thickness of the separator line */
+    background-color: #A4ADFF; /* Color of the separator line */
+    margin: -80px auto; /* Margin for centering */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.separator1 {
+    width: 1450px; /* Adjust width as needed */
+    height: 1px; /* Thickness of the separator line */
+    background-color: #A4ADFF; /* Color of the separator line */
+    margin: -80px auto; /* Margin for centering */
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.light-mode .custom-subheading {
+    color: #A4ADFF; /* Dark mode text color */
+    /* Outline effect using text-stroke */
+    -webkit-text-stroke: 3px #191a1d; /* For webkit browsers */
+}
+
+.custom-img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    border-radius: 15px; /* Rounded edges */
+    object-fit: cover; /* Ensures the image covers the box without distorting */
+    object-position: center top; /* Positions the image lower in the box */
+    transition: box-shadow 0.3s;
+}
+
+.custom-img:hover {
+    box-shadow: 0 8px 16px rgba(164, 173, 255, 0.7); /* Slightly stronger shadow on hover */
+}
+
+.light-mode .custom-img {
+    box-shadow: 0 4px 8px rgba(25, 26, 29, 0.5); /* Faint drop shadow for light mode */
+}
+
+.light-mode .custom-img:hover {
+    box-shadow: 0 8px 16px rgba(25, 26, 29, 0.7); /* Slightly stronger shadow on hover */
+}
+
+.project {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.project img {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Rounded edges */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.project hr {
+    width: 50%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.project p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+.project-link:hover {
+    cursor: pointer;
+    text-decoration: none; /* Remove underline on hover */
+    color: inherit; /* Inherit text color on hover */
+}
+
+/* Specialization Card */
+.specialization-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.specialization-card .icon {
+    font-size: 3rem;
+    color: #A4ADFF;
+}
+
+.specialization-card h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.specialization-card p {
+    color: #6c757d;
+}
+
+.specialization-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Light mode styles */
+.light-mode {
+    background-color: #DDE0E2;
+    color: #191a1d;
+}
+
+.light-mode h1, .light-mode h2 {
+    color: #191a1d;
+}
+
+.light-mode .project {
+    background: #191a1d;
+    color: #DDE0E2;
+}
+
+.light-mode .nav-link {
+    color: #191a1d !important;
+}
+
+.light-mode #theme-icon {
+    color: #191a1d;
+}
+
+.light-mode .navbar {
+    background-color: #DDE0E2;
+}
+
+.light-mode .navbar-brand {
+    color: #191a1d !important;
+}
+
+.light-mode .navbar-brand:hover {
+    color: #616161 !important;
+}
+
+/* Smooth scrolling animation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reveal animation for About Me section */
+#about {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#about.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-fluid.rounded.mb-3 {
+    width: 500px; /* Adjust the size as needed */
+    height: 500px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the image a circle */
+    object-fit: cover; /* Ensure the image covers the circle area without distortion */
+    display: block; /* Ensure proper alignment and spacing */
+    margin: 0 auto; /* Center the image horizontally if needed */
+}
+
+
+/* Separator styling */
+.separator, .separator1 {
+  height: 2px;
+  background-color: #A4ADFF;
+  margin: 30px 0;
+  margin-left: 45px;
+}
+
+/* Contact section styling */
+.contact-info {
+  font-size: 18px;
+  padding-top: 19px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+
+}
+/* Default button styling (Dark Mode) */
+.btn-primary {
+    background-color: #A4ADFF; /* Main background color */
+    color: #191a1d; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn-primary:hover {
+    background-color: #8a8fff; /* Lighter background color on hover */
+    color: #191a1d; /* Ensure text color remains readable */
+}
+
+/* Light mode button styling */
+.light-mode .btn-primary {
+    background-color: #191a1d; /* Dark background color for light mode */
+    color: #fff; /* White text color */
+}
+
+.light-mode .btn-primary:hover {
+    background-color: #dcdcdc; /* Lighter gray background on hover */
+    color: #191a1d; /* Text color changes to dark for readability */
+}
+
