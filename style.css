@@ -365,21 +365,54 @@ html {
 }
 
 
+/* Keyframes for animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Footer styles */
 .footer {
     background-color: #191a1d; /* Dark background color */
     color: #DDE0E2; /* Light text color */
     border-top: 2px solid #A4ADFF; /* Accent color for the border */
+    opacity: 0; /* Start with hidden opacity for animation */
+    animation: fadeInUp 1s forwards; /* Animation for the footer */
 }
 
+/* Heading styles in footer */
 .footer h4 {
     color: #A4ADFF; /* Heading color */
     margin-bottom: 20px;
+    opacity: 0; /* Start with hidden opacity for animation */
+    animation: fadeInUp 1s 0.5s forwards; /* Animation for headings with a slight delay */
 }
 
+/* Social icons animation */
 .social-icons {
     margin-top: 10px;
+    opacity: 0; /* Start with hidden opacity for animation */
+    animation: scaleIn 1s 1s forwards; /* Animation for social icons with a delay */
 }
 
+/* Social icon styles */
 .social-icon {
     font-size: 1.5rem;
     color: #DDE0E2; /* Light color for icons */
@@ -387,21 +420,29 @@ html {
     transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Social icon hover effect */
 .social-icon:hover {
     color: #A4ADFF; /* Accent color on hover */
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
+/* Footer link styles */
 .footer-link {
     color: #DDE0E2; /* Light color for footer links */
     text-decoration: none;
+    opacity: 0; /* Start with hidden opacity for animation */
+    animation: fadeInUp 1s 1.5s forwards; /* Animation for links with a delay */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Footer link hover effect */
 .footer-link:hover {
     color: #A4ADFF; /* Accent color on hover */
     text-decoration: underline; /* Underline on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
+/* Footer paragraph styles */
 .footer p {
     margin: 5px 0;
 }
