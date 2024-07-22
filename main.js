@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        emailjs.sendForm('service_ns9t27r', 'template_43tppo7', this)
+        emailjs.sendForm('service_rq6ym1k', 'template_7wcyd5o', this)
             .then(function(response) {
                 alert('Your message has been sent successfully!');
                 document.getElementById('contact-form').reset(); // Reset form fields
