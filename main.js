@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+// Initialize EmailJS
+(function() {
+    emailjs.init('ZKaMSRnzASulnaLgw'); // Replace 'YOUR_USER_ID' with your actual EmailJS User ID
+})();
+
     // Smooth scrolling
     document.querySelectorAll('a.nav-link').forEach(anchor => {
         anchor.addEventListener('click', function (event) {
