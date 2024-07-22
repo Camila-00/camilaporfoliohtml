@@ -16,18 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Smooth scrolling
-    document.querySelectorAll('a.nav-link').forEach(anchor => {
-        anchor.addEventListener('click', function (event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                document.querySelector(hash).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+// Smooth scrolling
+document.querySelectorAll('a.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function (event) {
+        // Prevent default behavior
+        event.preventDefault();
+        
+        // Get the target section ID from the anchor's href attribute
+        var targetSection = document.querySelector(this.getAttribute('href'));
+        
+        // Check if the target section exists
+        if (targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
     });
+});
+
 
     // Reveal About Me section on scroll
     window.addEventListener('scroll', function() {
