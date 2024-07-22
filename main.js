@@ -3,11 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
 
-    // Initialize EmailJS
-    (function() {
-        emailjs.init('ZKaMSRnzASulnaLgw'); // Replace 'YOUR_USER_ID' with your actual EmailJS User ID
-    })();
-
     themeToggle.addEventListener('click', function (event) {
         event.preventDefault();
         body.classList.toggle('light-mode');
@@ -47,13 +42,21 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        emailjs.sendForm('service_rq6ym1k', 'template_7wcyd5o', this)
-            .then(function(response) {
-                alert('Your message has been sent successfully!');
-                document.getElementById('contact-form').reset(); // Reset form fields
-            }, function(error) {
-                console.error('Error:', error);
-                alert('There was an error sending your message. Please try again.');
-            });
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send('service_rq6ym1k', 'template_7wcyd5o', {
+            from_name: name,
+            from_email: email,
+            message: message
+        })
+        .then(function(response) {
+            console.log('Success:', response);
+            alert('Your message has been sent!');
+        }, function(error) {
+            console.error('Error:', error);
+            alert('Oops! Something went wrong. Please try again.');
+        });
     });
 });
